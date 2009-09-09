@@ -10,7 +10,8 @@
 #define ORANGE  RED|GREEN
 #define MAGENTA  RED|BLUE
 #define TEAL  BLUE|GREEN
-#define WHITE (RED|GREEN|BLUE)-0xA0
+//#define WHITE (RED|GREEN|BLUE)-0xA0
+#define WHITE (RED|GREEN|BLUE)
 
 //Define the SPI Pin Numbers
 #define DATAOUT 11//MOSI
