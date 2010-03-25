@@ -1,0 +1,32 @@
+Arduino Life library
+
+- Create two empty arrays- one that's populated, one that's empty
+- Use the populated array to determine how the empty array is filled out
+- Discard the populated array, the newly populated array becomes the template
+  for the next Life generation
+
+Testing
+
+- Test the order of cell computation?  A new cell should not be calculated
+  until the next round
+- Underpopulation test - A cell w/fewer than 2 live neighbors should die
+- Overpopulation test - A cell with more than 3 live neighbors should die
+- Next Gen cell test - A cell with 2 or 3 neighbors should live to the next
+  generation
+- New cell test - A new cell is created whne 3 surrounding cells are populated
+
+API
+- get_neighbors() - returns a list of populated neighbor cells
+- calc_cells() - calculateѕ a group of cells, returns the results as an array
+  of cells
+- dump_to_serial - dumps the array of cells to the serial line as a matrix for
+  human consumption
+
+Underpopulation tests
+X = live cell
+* = cell being checked
+. = dead cell
+
+x.      x.x     x*      x*
+.*      .*.     .x      xx
+dies    lives   lives   dies
